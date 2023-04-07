@@ -19,6 +19,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
 
   <body>
@@ -162,7 +165,40 @@
           <h2 class="team-title title">Our Team</h2>
           <ul class="team-list list">
             <li class="team-list-item">
+              <!-- Підключення різних картинок при різних екранах
+              <picture>
+                <source
+                  srcset="
+                    ./images/imgguerrero.jpg    1x,
+                    ./images/imgguerrero-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/imgguerrero-tab.jpg    1x,
+                    ./images/imgguerrero-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/imgguerrero-mob.jpg    1x,
+                    ./images/imgguerrero-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/imgguerrero.jpg"
+                  alt="Mark Guerrero"
+                  width="264"
+                />
+              </picture> -->
               <img
+                srcset="
+                  ./images/imgguerrero.jpg    1x,
+                  ./images/imgguerrero-2x.jpg 2x
+                "
                 src="./images/imgguerrero.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -205,7 +241,12 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img src="./images/imgford.jpg" alt="Tom Ford" width="264" />
+              <img
+                srcset="./images/imgford.jpg 1x, ./images/imgford-2x.jpg 2x"
+                src="./images/imgford.jpg"
+                alt="Tom Ford"
+                width="264"
+              />
               <div class="team-list-text">
                 <h3 class="team-list-title list-title">Tom Ford</h3>
                 <p class="team-list-description list-description">
@@ -245,6 +286,7 @@
             </li>
             <li class="team-list-item">
               <img
+                srcset="./images/imggarcia.jpg 1x, ./images/imggarcia-2x.jpg 2x"
                 src="./images/imggarcia.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -286,6 +328,7 @@
             </li>
             <li class="team-list-item">
               <img
+                srcset="./images/imgwilson.jpg 1x, ./images/imgwilson-2x.jpg 2x"
                 src="./images/imgwilson.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -530,5 +573,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
