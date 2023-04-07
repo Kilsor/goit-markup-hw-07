@@ -1,0 +1,897 @@
+:root {
+  --accent-color: #404bbf;
+  --primary-text: #2e2f42;
+  --secondary-text-color: #434455;
+  --primary-text-color-light: #ffffff;
+  --button-color: #4d5ae5;
+  --background-color: #2e2f42;
+  --background-color-secondary: #f4f4fd;
+  --footer-text-color: #e7e9fc;
+  --footer-logo-color: #f4f4fd;
+  --footer-accent-color: #31d0aa;
+  --customers-logo-color: #8e8f99;
+  --modal-beckground: #fcfcfc;
+  --modal-check: #757575;
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Скидання маркування списків */
+.list {
+  list-style: none;
+}
+
+/* Скидання підчеркувань посилань */
+.link {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-text);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ================================ COMPONENTS ================================ */
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.list-title {
+  color: var(--primary-text);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.list-description {
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.logo-style {
+  color: var(--accent-color);
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* ================================ /COMPONENTS ================================ */
+
+/* ================================== HEADER ================================== */
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--footer-text-color);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.header-contacts-list {
+  display: flex;
+  gap: 40px;
+}
+
+/* Логотип */
+.header-logo {
+  margin-right: 76px;
+  color: var(--primary-text);
+}
+
+/* Головне меню */
+.header-menu-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-text);
+  transition: color var(--animation);
+  position: relative;
+}
+
+.header-menu-link:hover,
+.header-menu-link:focus {
+  color: var(--accent-color);
+}
+
+.header-menu-link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0px;
+  top: 43px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity var(--animation);
+}
+
+.header-menu-link:hover:after,
+.header-menu-link:focus:after {
+  opacity: 1;
+}
+
+/* Контактна інформація */
+
+.header-contacts-link {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  transition: color var(--animation);
+}
+
+.header-contacts-link:hover,
+.header-contacts-link:focus {
+  color: var(--accent-color);
+}
+
+.current {
+  color: var(--accent-color);
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0px;
+  top: 43px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  opacity: 1;
+}
+
+/* ================================== /HEADER ================================== */
+
+/* ==================================== HERO ==================================== */
+
+.hero-container {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  width: 1440px;
+  height: 600px;
+  background-color: var(--background-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* Заставка */
+
+.hero-title {
+  max-width: 496px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color-light);
+}
+
+.hero-btn {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  margin-top: 48px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--primary-text-color-light);
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background var(--animation);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background: var(--accent-color);
+}
+/* ================================== /HERO ================================== */
+
+/* ================================== ABOUT ================================== */
+
+.about {
+  padding-bottom: 60px;
+}
+
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.about-list-item {
+  flex-basis: calc((100% - 72px) / 4);
+}
+
+.about-box {
+  width: 264px;
+  height: 112px;
+  background: var(--background-color-secondary);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================================== /ABOUT ================================== */
+
+/* ================================== WORKS ================================== */
+
+.works {
+  padding-top: 60px;
+}
+
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.work-list-item {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.works-title {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+/* ================================== /WORKS ================================== */
+
+/* ================================== OUR TEAM ================================== */
+
+.team {
+  background: var(--background-color-secondary);
+}
+
+.team-title {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.team-list-text {
+  padding: 32px 16px 32px 16px;
+  text-align: center;
+}
+
+.team-list-item {
+  flex-basis: calc((100% - 72px) / 4);
+  background: var(--primary-text-color-light);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.team-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--button-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--animation);
+}
+
+.team-soc-icon {
+  fill: var(--footer-logo-color);
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--accent-color);
+}
+
+/* ================================== /OUR TEAM ================================== */
+
+/* ================================== CUSTOMERS ================================== */
+
+.customers-title {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.customers-list-item {
+  width: 168px;
+  height: 88px;
+  flex-basis: calc((100% - 120px) / 6);
+}
+
+.customers-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--customers-logo-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--customers-logo-color);
+  transition: border var(--animation), fill var(--animation);
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+}
+
+/* ================================== CUSTOMERS ================================== */
+
+/* ================================== PORTFOLIO ================================== */
+
+.catalog {
+  padding-top: 96px;
+}
+
+.catalog-filter-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--button-color);
+  background: var(--background-color-secondary);
+  border: 1px solid var(--footer-text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 12px 24px;
+  transition: color var(--animation), background var(--animation),
+    box-shadow var(--animation), border-radius var(--animation);
+}
+
+.catalog-filter-btn:hover,
+.catalog-filter-btn:focus {
+  color: var(--primary-text-color-light);
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.catalog-filter {
+  text-align: center;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 72px;
+  justify-content: center;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.catalog-list-item {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.catalog-list-text {
+  border: 1px solid var(--footer-text-color);
+  border-top: none;
+  padding: 32px 16px 32px 16px;
+}
+
+.catalog-list-link {
+  background: var(--primary-text-color-light);
+  display: block;
+  box-shadow: 0px;
+  transition: box-shadow var(--animation);
+}
+
+.catalog-list-link:hover,
+.catalog-list-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--background-color-secondary);
+  background: var(--button-color);
+  padding: 40px 32px;
+  overflow: auto;
+  transform: translate(0, 100%);
+  transition: transform var(--animation);
+}
+
+.catalog-list-link:hover .overlay,
+.catalog-list-link:focus .overlay {
+  transform: translate(0, 0);
+}
+
+/* ================================== /PORTFOLIO================================== */
+
+/* ================================== FOOTER ================================== */
+/* Стилі підвалу */
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: var(--background-color);
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-logo {
+  color: var(--footer-logo-color);
+}
+
+.footer-description {
+  margin-top: 16px;
+  max-width: 264px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--footer-text-color);
+}
+
+.footer-soc {
+  margin-left: 120px;
+}
+
+.footer-soc-title {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-text-color-light);
+  margin-bottom: 16px;
+}
+
+.footer-soc-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--button-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--animation);
+}
+
+.footer-soc-icon {
+  fill: var(--footer-logo-color);
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--footer-accent-color);
+}
+
+.footer-subscribe {
+  margin-left: auto;
+}
+
+.footer-subscribe-title {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-text-color-light);
+  margin-bottom: 16px;
+}
+
+.footer-subscribe-form {
+  display: flex;
+}
+
+.subscribe-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: transparent;
+  padding-left: 16px;
+  color: var(--primary-text-color-light);
+  font-size: 12px;
+  line-height: 2px;
+  letter-spacing: 0.04em;
+  outline: transparent;
+  transition: border-color var(--animation);
+}
+
+.subscribe-input:hover,
+.subscribe-input:focus {
+  border-color: var(--primary-text-color-light);
+}
+
+.subscribe-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+  width: 165px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--primary-text-color-light);
+  background: var(--button-color);
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  gap: 16px;
+  cursor: pointer;
+  transition: background var(--animation);
+  margin-left: 24px;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background: var(--accent-color);
+}
+
+.subscribe-icon {
+  fill: var(--primary-text-color-light);
+}
+
+/* ================================== /FOOTER ================================== */
+
+/* ================================== MODAL ================================== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal {
+  width: 408px;
+  min-height: 576px;
+  background: var(--modal-beckground);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  transition: transform 300ms linear;
+  padding: 24px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0) rotate(0deg);
+}
+
+.modal-close-button {
+  width: 24px;
+  height: 24px;
+  background: var(--footer-text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-bottom: 24px;
+  fill: var(--background-color);
+  transition: background var(--animation), fill var(--animation);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background: var(--accent-color);
+  fill: var(--primary-text-color-light);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--primary-text);
+  margin-bottom: 16px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrap {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 38px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  outline: transparent;
+  transition: border-color var(--animation), fill var(--animation);
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--background-color);
+  transition: fill var(--animation);
+}
+
+.modal-input:hover,
+.modal-input:focus {
+  border-color: var(--button-color);
+}
+
+.modal-input:hover + .modal-input-icon,
+.modal-input:focus + .modal-input-icon {
+  fill: var(--button-color);
+}
+
+.modal-name-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--customers-logo-color);
+  margin-bottom: 4px;
+}
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  outline: transparent;
+  transition: border-color var(--animation);
+}
+
+.modal-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-textarea:hover,
+.modal-textarea:focus {
+  border-color: var(--button-color);
+}
+
+.modal-check-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--modal-check);
+  display: flex;
+  align-items: center;
+}
+
+.modal-check-label span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  margin-right: 8px;
+}
+
+.modal-privacy:checked + .modal-check-label span {
+  background: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 2px;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  fill: var(--footer-logo-color);
+}
+
+.privacy-link {
+  margin-left: 4px;
+  text-decoration: underline;
+  color: var(--button-color);
+}
+
+/* .modal-privacy:checked + .modal-check-label::before {
+  background: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 2px;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+/* .modal-check-label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  display: block;
+} */
+
+.modal-btn {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  margin-top: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--primary-text-color-light);
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background var(--animation);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background: var(--accent-color);
+}
+/* ================================== /MODAL ================================== */
