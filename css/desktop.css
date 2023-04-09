@@ -1,4 +1,111 @@
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .container {
     width: 1200px;
   }
+
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  /* .hero-container {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    width: 1440px;
+    height: 600px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-background.jpg);
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-container {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-background-2x.jpg);
+  } */
+
+  /* ================================== ABOUT ================================== */
+
+  .about {
+    padding-bottom: 60px;
+  }
+
+  .about-list {
+    gap: 24px;
+  }
+
+  .about-list-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .about-list-description {
+    font-weight: 400;
+  }
+
+  .about-list-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+
+  .about-box {
+    width: 264px;
+    height: 112px;
+    background: var(--light);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ================================== /ABOUT ================================== */
+
+  /* ================================== WORKS ================================== */
+
+  .works {
+    display: flex;
+    padding-top: 60px;
+  }
+
+  .works-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .work-list-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+
+  .works-title {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  /* ================================== /WORKS ================================== */
+
+  .team-list {
+    gap: 24px;
+  }
+
+  .team-list-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+
+  .customers-list {
+    gap: 24px;
+  }
+
+  .customers-list-item {
+    flex-basis: calc((100% - 120px) / 6);
+  }
+}

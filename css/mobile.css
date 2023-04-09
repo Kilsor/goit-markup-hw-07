@@ -1,6 +1,6 @@
 /* ================================ COMPONENTS ================================ */
 .container {
-  width: 1158px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -24,7 +24,6 @@
 }
 
 .list-description {
-  color: var(--text);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -45,8 +44,8 @@
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 /* ================================ /COMPONENTS ================================ */
@@ -156,16 +155,12 @@
 /* ==================================== HERO ==================================== */
 
 .hero-container {
-  padding-top: 188px;
-  padding-bottom: 188px;
-  width: 1440px;
-  height: 600px;
   background-color: var(--dark);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-background.jpg);
+    url(../images/hero-background-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -179,7 +174,7 @@
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero-background-2x.jpg);
+      url(../images/hero-background-mob-2x.jpg);
   }
 }
 /* Заставка */
@@ -223,29 +218,26 @@
 
 /* ================================== ABOUT ================================== */
 
-.about {
-  padding-bottom: 60px;
-}
-
 .about-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
 }
 
-.about-list-item {
-  flex-basis: calc((100% - 72px) / 4);
+.about-list-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.about-list-description {
+  font-weight: 500;
 }
 
 .about-box {
-  width: 264px;
-  height: 112px;
-  background: var(--light);
-  border-radius: 4px;
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
 
 /* ================================== /ABOUT ================================== */
@@ -253,22 +245,7 @@
 /* ================================== WORKS ================================== */
 
 .works {
-  padding-top: 60px;
-}
-
-.works-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.work-list-item {
-  flex-basis: calc((100% - 48px) / 3);
-}
-
-.works-title {
-  text-align: center;
-  margin-bottom: 72px;
+  display: none;
 }
 
 /* ================================== /WORKS ================================== */
@@ -287,7 +264,7 @@
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
 }
 
 .team-list-text {
@@ -296,7 +273,7 @@
 }
 
 .team-list-item {
-  flex-basis: calc((100% - 72px) / 4);
+  width: 100%;
   background: var(--white-background);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -346,13 +323,13 @@
 .customers-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px 16px;
 }
 
 .customers-list-item {
-  width: 168px;
+  width: 190px;
   height: 88px;
-  flex-basis: calc((100% - 120px) / 6);
+  flex-basis: calc((100% - 16px) / 2);
 }
 
 .customers-link {
@@ -365,12 +342,6 @@
   justify-content: center;
   fill: var(--subtl-text);
   transition: border var(--animation), fill var(--animation);
-}
-
-.customers-link:hover,
-.customers-link:focus {
-  border: 1px solid var(--pressed-state);
-  fill: var(--pressed-state);
 }
 
 /* ================================== CUSTOMERS ================================== */
