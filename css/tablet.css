@@ -1,7 +1,153 @@
 @media screen and (min-width: 768px) {
   .container {
-    width: 720px;
+    width: 768px;
   }
+
+  .tab-container {
+    width: 584px;
+  }
+
+  /* ================================== HEADER ================================== */
+
+  .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 121px;
+  }
+
+  .header-menu {
+    display: flex;
+    gap: 40px;
+  }
+
+  .menu-open-btn {
+    display: none;
+  }
+
+  .header-contacts {
+    display: flex;
+  }
+
+  .header-contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 0px;
+  }
+
+  /* Логотип */
+  .header-logo {
+    margin-right: 120px;
+    color: var(--dark);
+  }
+
+  /* Головне меню */
+  .header-menu-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--dark);
+    transition: color var(--animation);
+    position: relative;
+  }
+
+  .header-menu-link:hover,
+  .header-menu-link:focus {
+    color: var(--pressed-state);
+  }
+
+  .header-menu-link:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0px;
+    top: 43px;
+    background: var(--pressed-state);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity var(--animation);
+  }
+
+  .header-menu-link:hover:after,
+  .header-menu-link:focus:after {
+    opacity: 1;
+  }
+
+  /* Контактна інформація */
+
+  .header-contacts-link {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    transition: color var(--animation);
+  }
+
+  .header-contacts-link:hover,
+  .header-contacts-link:focus {
+    color: var(--pressed-state);
+  }
+
+  .current {
+    color: var(--pressed-state);
+  }
+
+  .current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0px;
+    top: 43px;
+    background: var(--pressed-state);
+    border-radius: 2px;
+    opacity: 1;
+  }
+
+  /* ================================== /HEADER ================================== */
+
+  /* ==================================== HERO ==================================== */
+
+  .hero-container {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-background-tab.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-container {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-background-tab-2x.jpg);
+    }
+  }
+
+  /* Заставка */
+
+  .hero-title {
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+
+  .hero-btn:hover,
+  .hero-btn:focus {
+    background: var(--pressed-state);
+  }
+  /* ================================== /HERO ================================== */
 
   /* ================================== ABOUT ================================== */
 
@@ -50,4 +196,63 @@
     border: 1px solid var(--pressed-state);
     fill: var(--pressed-state);
   }
+
+  /* ================================== FOOTER ================================== */
+
+  .footer-container {
+    justify-content: left;
+    gap: 72px 24px;
+  }
+
+  .footer-logo {
+    text-align: left;
+  }
+
+  .footer-soc-title {
+    text-align: left;
+  }
+
+  .footer-soc-link:hover,
+  .footer-soc-link:focus {
+    background-color: var(--success);
+  }
+
+  .footer-subscribe {
+    margin-right: auto;
+  }
+
+  .footer-subscribe-title {
+    text-align: left;
+  }
+
+  .subscribe-input:hover,
+  .subscribe-input:focus {
+    border-color: var(--white-background);
+  }
+
+  .footer-subscribe-form {
+    flex-wrap: nowrap;
+  }
+
+  .subscribe-input {
+    width: 264px;
+  }
+
+  .subscribe-btn {
+    margin-left: 24px;
+  }
+
+  .subscribe-btn:hover,
+  .subscribe-btn:focus {
+    background: var(--pressed-state);
+  }
+
+  /* ================================== /FOOTER ================================== */
+
+  /* ================================== MODAL ================================== */
+  .modal {
+    width: 408px;
+  }
+
+  /* ================================== /MODAL ================================== */
 }

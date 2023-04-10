@@ -58,96 +58,131 @@
   border-bottom: 1px solid var(--accent);
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .header-nav {
   display: flex;
   align-items: center;
 }
 
-.header-menu {
+.menu-open-btn {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
   display: flex;
-  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+.menu-open-icon {
 }
 
-.header-contacts-list {
+.mob-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white-background);
+  padding: 24px 24px 40px 40px;
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  transform: opacity 1;
+  transition: opacity 300ms linear;
+}
+
+.mob-menu.is-hidden {
+  opacity: 0;
+}
+
+.mob-menu-close {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-bottom: 24px;
+  fill: var(--dark);
+  transition: background var(--animation), fill var(--animation);
+}
+
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mob-menu-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--dark);
+}
+
+.mob-contacts-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mob-contacts-item:last-child {
+  margin-bottom: 48px;
+}
+
+.mob-contacts-phone {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--primary-brand);
+}
+
+.mob-contacts-mail {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.mob-soc-list {
+  display: flex;
+  gap: 30px;
+}
+
+.mob-soc-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mob-soc-icon {
+  fill: var(--light);
+}
+
+.header-menu {
+  display: none;
+}
+
+.active {
+  color: var(--primary-brand);
+}
+
+.header-contacts {
+  display: none;
 }
 
 /* Логотип */
 .header-logo {
   margin-right: 76px;
   color: var(--dark);
-}
-
-/* Головне меню */
-.header-menu-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--dark);
-  transition: color var(--animation);
-  position: relative;
-}
-
-.header-menu-link:hover,
-.header-menu-link:focus {
-  color: var(--pressed-state);
-}
-
-.header-menu-link:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  left: 0px;
-  top: 43px;
-  background: var(--pressed-state);
-  border-radius: 2px;
-  opacity: 0;
-  transition: opacity var(--animation);
-}
-
-.header-menu-link:hover:after,
-.header-menu-link:focus:after {
-  opacity: 1;
-}
-
-/* Контактна інформація */
-
-.header-contacts-link {
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  transition: color var(--animation);
-}
-
-.header-contacts-link:hover,
-.header-contacts-link:focus {
-  color: var(--pressed-state);
-}
-
-.current {
-  color: var(--pressed-state);
-}
-
-.current::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  left: 0px;
-  top: 43px;
-  background: var(--pressed-state);
-  border-radius: 2px;
-  opacity: 1;
 }
 
 /* ================================== /HEADER ================================== */
@@ -164,6 +199,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 112px 0px;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -177,15 +213,14 @@
       url(../images/hero-background-mob-2x.jpg);
   }
 }
-/* Заставка */
 
 .hero-title {
-  max-width: 496px;
+  max-width: 320px;
   margin: 0 auto;
   text-align: center;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--white-background);
 }
@@ -210,10 +245,6 @@
   transition: background var(--animation);
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
-  background: var(--pressed-state);
-}
 /* ================================== /HERO ================================== */
 
 /* ================================== ABOUT ================================== */
@@ -446,17 +477,20 @@
 /* ================================== FOOTER ================================== */
 /* Стилі підвалу */
 .footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
   background: var(--dark);
 }
 
 .footer-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px;
 }
 
 .footer-logo {
+  display: block;
   color: var(--light);
+  text-align: center;
 }
 
 .footer-description {
@@ -468,15 +502,12 @@
   color: var(--accent);
 }
 
-.footer-soc {
-  margin-left: 120px;
-}
-
 .footer-soc-title {
   font-size: 16px;
   line-height: 1.5;
   color: var(--white-background);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-soc-list {
@@ -505,45 +536,34 @@
   fill: var(--light);
 }
 
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: var(--success);
-}
-
-.footer-subscribe {
-  margin-left: auto;
-}
-
 .footer-subscribe-title {
   font-size: 16px;
   line-height: 1.5;
   color: var(--white-background);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-subscribe-form {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .subscribe-input {
-  width: 264px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: transparent;
   padding-left: 16px;
+  margin-bottom: 16px;
   color: var(--white-background);
   font-size: 12px;
   line-height: 2px;
   letter-spacing: 0.04em;
   outline: transparent;
   transition: border-color var(--animation);
-}
-
-.subscribe-input:hover,
-.subscribe-input:focus {
-  border-color: var(--white-background);
 }
 
 .subscribe-input::placeholder {
@@ -569,11 +589,7 @@
   cursor: pointer;
   transition: background var(--animation);
   margin-left: 24px;
-}
-
-.subscribe-btn:hover,
-.subscribe-btn:focus {
-  background: var(--pressed-state);
+  margin: 0 auto;
 }
 
 .subscribe-icon {
@@ -593,8 +609,8 @@
 }
 
 .modal {
-  width: 408px;
-  min-height: 576px;
+  width: 392px;
+  min-height: 586px;
   background: var(--modal-background);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -605,6 +621,12 @@
   transform: translate(-50%, -50%) scale(1) rotate(360deg);
   transition: transform 300ms linear;
   padding: 24px;
+}
+
+@media screen and (max-width: 427px) {
+  .modal {
+    width: 90%;
+  }
 }
 
 .backdrop.is-hidden .modal {

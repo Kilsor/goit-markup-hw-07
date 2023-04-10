@@ -26,9 +26,8 @@
 
   <body>
     <!-- Шапка сторінки -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header-container container">
-        
         <nav class="header-nav">
           <a class="header-logo logo link" href="./index.html"
             ><span class="logo-style">Web</span>Studio</a
@@ -48,6 +47,11 @@
               <a class="header-menu-link link" href="">Contacts</a>
             </li>
           </ul>
+          <button type="button" data-menu-open class="menu-open-btn">
+            <svg width="32" height="22" class="menu-open-icon">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
         </nav>
 
         <address class="header-contacts">
@@ -67,19 +71,88 @@
           </ul>
         </address>
       </div>
-    </header> -->
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div>
+          <button type="button" data-menu-close class="mob-menu-close">
+            <svg width="8" height="8" class="mob-close-icon">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu-list list">
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link active" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="mob-contacts-list list">
+            <li class="mob-contacts-item">
+              <a class="mob-contacts-phone link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mob-contacts-item">
+              <a class="mob-contacts-mail link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-soc-list list">
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg width="16" height="16" class="mob-soc-icon">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg width="16" height="16" class="mob-soc-icon">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg width="16" height="16" class="mob-soc-icon">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg width="16" height="16" class="mob-soc-icon">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
     <!-- Унікальний контенс сторінки -->
     <main>
       <!-- Заставка -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="hero-container container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="hero-btn" data-modal-open type="button">
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
 
       <!-- Про нас -->
       <section class="about section">
@@ -173,7 +246,7 @@
 
       <!-- Наша команда -->
       <section class="team section">
-        <div class="container">
+        <div class="container tab-container">
           <h2 class="team-title title">Our Team</h2>
           <ul class="team-list list">
             <li class="team-list-item">
@@ -388,7 +461,7 @@
 
       <!-- Наші клієнти -->
       <section class="customers section">
-        <div class="container">
+        <div class="container tab-container">
           <h2 class="customers-title title">Customers</h2>
           <ul class="customers-list list">
             <li class="customers-list-item">
@@ -439,8 +512,8 @@
     </main>
 
     <!-- Підвал сторінки -->
-    <!-- <footer class="footer">
-      <div class="footer-container container">
+    <footer class="footer section">
+      <div class="footer-container container tab-container">
         <div class="footer-about">
           <a class="footer-logo logo link" href="./index.html"
             ><span class="logo-style">Web</span>Studio</a
@@ -503,10 +576,10 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- Модальне вікно -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" data-modal-close class="modal-close-button">
           <svg width="8" height="8" class="modal-close-icon">
@@ -586,7 +659,7 @@
           <button type="submit" class="modal-btn">Send</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <!-- Java скрипти -->
     <script src="./js/modal.js"></script>

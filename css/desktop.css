@@ -1,6 +1,6 @@
 @media screen and (min-width: 1158px) {
   .container {
-    width: 1200px;
+    width: 1158px;
   }
 
   .section {
@@ -8,29 +8,50 @@
     padding-bottom: 120px;
   }
 
-  /* .hero-container {
-    padding-top: 188px;
-    padding-bottom: 188px;
-    width: 1440px;
-    height: 600px;
+  /* ================================== HEADER ================================== */
+
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .header-contacts-list {
+    gap: 40px;
+  }
+
+  .header-contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  /* ================================== /HEADER ================================== */
+
+  /* ==================================== HERO ==================================== */
+
+  .hero-container {
+    width: 100%;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero-background.jpg);
+    padding: 188px 0px;
   }
-}
 
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero-container {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/hero-background-2x.jpg);
-  } */
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-container {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-background-2x.jpg);
+    }
+  }
+
+  /* ================================== /HERO ================================== */
 
   /* ================================== ABOUT ================================== */
 
@@ -108,4 +129,21 @@
   .customers-list-item {
     flex-basis: calc((100% - 120px) / 6);
   }
+
+  /* ================================== FOOTER ================================== */
+
+  .footer-container {
+    gap: 0px;
+  }
+
+  .footer-soc {
+    margin-left: 120px;
+  }
+
+  .footer-subscribe {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  /* ================================== /FOOTER ================================== */
 }
