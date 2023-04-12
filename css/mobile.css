@@ -27,7 +27,6 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 8px;
 }
 
 .logo {
@@ -64,16 +63,12 @@
 }
 
 .menu-open-btn {
-  width: 40px;
-  height: 40px;
   background: transparent;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
-}
-.menu-open-icon {
 }
 
 .mob-menu {
@@ -127,13 +122,13 @@
   margin-bottom: 40px;
 }
 
-.mob-contacts-item:last-child {
+.mob-contacts-list {
   margin-bottom: 48px;
 }
 
 .mob-contacts-phone {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 26px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -181,7 +176,6 @@
 
 /* Логотип */
 .header-logo {
-  margin-right: 76px;
   color: var(--dark);
 }
 
@@ -311,6 +305,10 @@
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-list-description {
+  margin-bottom: 8px;
+}
+
 .team-soc-list {
   display: flex;
   justify-content: center;
@@ -430,6 +428,10 @@
   border: 1px solid var(--accent);
   border-top: none;
   padding: 32px 16px 32px 16px;
+}
+
+.catalog-list-description {
+  color: var(--text);
 }
 
 .catalog-list-link {

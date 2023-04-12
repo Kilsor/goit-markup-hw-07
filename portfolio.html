@@ -29,12 +29,9 @@
     <header class="header">
       <div class="header-container container">
         <nav class="header-nav">
-          <!-- Логотип -->
           <a class="header-logo logo link" href="./index.html"
             ><span class="logo-style">Web</span>Studio</a
           >
-
-          <!-- Меню -->
           <ul class="header-menu list">
             <li class="header-menu-item">
               <a class="header-menu-link link" href="./index.html">Studio</a>
@@ -48,9 +45,13 @@
               <a class="header-menu-link link" href="">Contacts</a>
             </li>
           </ul>
+          <button type="button" data-menu-open class="menu-open-btn">
+            <svg width="32" height="22" class="menu-open-icon">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
         </nav>
 
-        <!-- Контактна інформація -->
         <address class="header-contacts">
           <ul class="header-contacts-list list">
             <li class="header-contacts-item">
@@ -67,6 +68,75 @@
             </li>
           </ul>
         </address>
+      </div>
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div>
+          <button type="button" data-menu-close class="mob-menu-close">
+            <svg width="8" height="8" class="mob-close-icon">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu-list list">
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link active" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="mob-contacts-list list">
+            <li class="mob-contacts-item">
+              <a class="mob-contacts-phone link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mob-contacts-item">
+              <a class="mob-contacts-mail link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-soc-list list">
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg width="16" height="16" class="mob-soc-icon">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg width="16" height="16" class="mob-soc-icon">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg width="16" height="16" class="mob-soc-icon">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg width="16" height="16" class="mob-soc-icon">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -304,8 +374,8 @@
     </main>
 
     <!-- Підвал сторінки -->
-    <footer class="footer">
-      <div class="footer-container container">
+    <footer class="footer section">
+      <div class="footer-container container tab-container">
         <div class="footer-about">
           <a class="footer-logo logo link" href="./index.html"
             ><span class="logo-style">Web</span>Studio</a

@@ -42,7 +42,6 @@
   /* Логотип */
   .header-logo {
     margin-right: 120px;
-    color: var(--dark);
   }
 
   /* Головне меню */
@@ -223,6 +222,10 @@
 
   .footer-subscribe-title {
     text-align: left;
+  }
+
+  .subscribe-input {
+    margin-bottom: 0px;
   }
 
   .subscribe-input:hover,
