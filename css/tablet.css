@@ -172,6 +172,7 @@
 
   /* ================================== /WORKS ================================== */
 
+  /* ================================== OUR TEAM ================================== */
   .team-list {
     gap: 64px 24px;
   }
@@ -180,6 +181,14 @@
     flex-basis: calc((100% - 24px) / 2);
   }
 
+  .team-soc-link:hover,
+  .team-soc-link:focus {
+    background-color: var(--pressed-state);
+  }
+
+  /* ================================== /OUR TEAM ================================== */
+
+  /* ================================== CUSTOMERS ================================== */
   .customers-list {
     gap: 72px 24px;
   }
@@ -195,6 +204,8 @@
     border: 1px solid var(--pressed-state);
     fill: var(--pressed-state);
   }
+
+  /* ================================== /CUSTOMERS ================================== */
 
   /* ================================== PORTFOLIO ================================== */
 
@@ -302,5 +313,30 @@
     width: 408px;
   }
 
+  .modal-close-button:hover,
+  .modal-close-button:focus {
+    background: var(--pressed-state);
+    fill: var(--white-background);
+  }
+
+  .modal-input:hover,
+  .modal-input:focus {
+    border-color: var(--primary-brand);
+  }
+
+  .modal-input:hover + .modal-input-icon,
+  .modal-input:focus + .modal-input-icon {
+    fill: var(--primary-brand);
+  }
+
+  .modal-textarea:hover,
+  .modal-textarea:focus {
+    border-color: var(--primary-brand);
+  }
+
+  .modal-btn:hover,
+  .modal-btn:focus {
+    background: var(--pressed-state);
+  }
   /* ================================== /MODAL ================================== */
 }

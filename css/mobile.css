@@ -336,11 +336,6 @@
   fill: var(--light);
 }
 
-.team-soc-link:hover,
-.team-soc-link:focus {
-  background-color: var(--pressed-state);
-}
-
 /* ================================== /OUR TEAM ================================== */
 
 /* ================================== CUSTOMERS ================================== */
@@ -589,7 +584,7 @@
   width: 100%;
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
-  transition: opacity 300ms linear, visibility 300ms linear;
+  transition: opacihoverfocty 300ms linear, visibility 300ms linear;
 }
 
 .modal {
@@ -630,12 +625,6 @@
   margin-bottom: 24px;
   fill: var(--dark);
   transition: background var(--animation), fill var(--animation);
-}
-
-.modal-close-button:hover,
-.modal-close-button:focus {
-  background: var(--pressed-state);
-  fill: var(--white-background);
 }
 
 .is-hidden {
@@ -690,16 +679,6 @@
   transition: fill var(--animation);
 }
 
-.modal-input:hover,
-.modal-input:focus {
-  border-color: var(--primary-brand);
-}
-
-.modal-input:hover + .modal-input-icon,
-.modal-input:focus + .modal-input-icon {
-  fill: var(--primary-brand);
-}
-
 .modal-name-label {
   font-size: 12px;
   line-height: 1.17;
@@ -724,11 +703,6 @@
 
 .modal-textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
-}
-
-.modal-textarea:hover,
-.modal-textarea:focus {
-  border-color: var(--primary-brand);
 }
 
 .modal-check-label {
@@ -806,8 +780,4 @@
   transition: background var(--animation);
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
-  background: var(--pressed-state);
-}
 /* ================================== /MODAL ================================== */
